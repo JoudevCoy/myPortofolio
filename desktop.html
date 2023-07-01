@@ -1,0 +1,51 @@
+<style>
+  body {
+    margin: 0; padding: 0;
+    width: 3000px;
+    box-sizing: border-box;
+  }
+  .box1 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+  .box2 input {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    height: 20px;
+    width: 100%;
+  }
+  iframe:nth-child(1) {
+    width: 1200px;
+    height: 900px;
+  }
+  iframe:nth-child(2) {
+    width: 760px;
+    height: 900px;
+  }
+  iframe:nth-child(3) {
+    width: 480px;
+    height: 900px;
+  }
+</style>
+
+<div class="box1">
+  <iframe src="http://localhost:8080/"></iframe>
+  <iframe src="http://localhost:8080/"></iframe>
+  <iframe src="http://localhost:8080/"></iframe>
+</div>
+<div class="box2">
+  <iframe id="frame-control" src="http://localhost:8080/"></iframe>
+  <input type="range" id="range-input" max="2000" min="300" onchange="setIframe()">
+</div>
+
+<script>
+  function setIframe(){
+    var frame = document.getElementById("frame-control"),
+      rangeInput = document.getElementById("range-input");
+      
+    frame.style.width = rangeInput.value + "px";
+    requestAnimationFrame(setIframe);
+  }
+</script>

@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/all.min.css">
+  
+  <script defer src="js/myskills.js"></script>
   <title>Joxtelap Portofolio Web || HOME</title>
 </head>
 
@@ -35,15 +37,29 @@
         <div class="line"></div>
         <div class="line"></div>
       </div>
-      <ul class="bar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="bar darkBg">
+        <li><a href="#"> 
+          <span> Home </span> <i class="fas fa-home icon"></i>
+        </a></li>
+        <li><a href="#about">
+          <span> About </span> <i class="fas fa-user-tie icon"></i>
+        </a></li>
+        <li><a href="#project">
+          <span> Project </span> <i class="far fa-rectangle-list icon"></i>
+        </a></li>
+        <li><a href="#skills">
+          <span> Skills </span> <i class="fas fa-star icon"></i>
+        </a></li>
+        <li><a href="#contact">
+          <span> Contact </span> <i class="fab fa-whatsapp icon"></i>
+        </a></li>
         <li class="darkmodeToggle"><a href="#"><marquee>Mode Gelap</marquee></a></li>
       </ul>
     </div>
   </header>
+  
+  <!-- SPESIAL -->
+  <div class="back-nav"></div>
   
   
   <!-- BAGIAN HERO -->
@@ -53,11 +69,11 @@
         
         <div class="hero-title-wrap select-gelap">
           <div class="hero-decor">
-            <span class="d1"> &#60;h1&#62; </span>
-            <span class="d2"> &#60;/h1&#62; </span>
+            <span class="d1 faderight-hidden delay-100"> &#60;h1&#62; </span>
+            <span class="d2 fadeleft-hidden delay-100"> &#60;/h1&#62; </span>
           </div>
           <h1 class="hero-title darkText"> Joudev <span>Frontend Developer</span> </h1>
-          <p class="hero-desc darkText1"> Selamat datang di website portofolio ku, perkenalkan saya Jonathan Karisoh! Scroll kebawah untuk melihat lainnya! </p>
+          <p class="hero-desc darkText1"> Selamat datang di website portofolio ku, saya adalah seorang Frontend Developer! Scroll kebawah untuk melihat lainnya! </p>
           <a href="#about" class="hero-link"> Down <i class="fas fa-arrow-circle-down"></i></a>
         </div>
         
@@ -77,7 +93,7 @@
     <div class="container about-wrap darkBg">
       <div class="about">
         <h1 class="content-title about-title">
-          My About
+          My About <i class="fas fa-user-tie"></i>
         </h1>
         <div class="p-wrap fadein-hidden">
           <p class="p darkText1 pengalaman-wrap">
@@ -116,7 +132,9 @@
     </div>
     
     <div class="container darkBg" id="project">
-      <h1 class="content-title"> My Projects </h1>
+      <h1 class="content-title">
+        My Projects <i class="far fa-rectangle-list"></i>
+      </h1>
       <div class="project-wrap">
         <div class="project">
           <div class="prj-column darkBg fadeleft-hidden">
@@ -181,14 +199,30 @@
         </div>
       </div>
       <div class="more-prj-wrap">
-        <a href="" class="more-prj-link darkText"> More </a>
+        <a href="https://github.com/JoudevCoy" class="more-prj-link darkText"> More </a>
+      </div>
+    </div>
+    
+    <div class="container darkBg" id="skills">
+      <h1 class="content-title"> 
+        My Skills <i class="fas fa-star"></i>
+      </h1>
+      <div class="skills select-gelap">
+        <div class="skill-tech">
+          <h1 class="skill-title"> Teknologi </h1>
+          <ul id="skill-tech-list"></ul>
+        </div>
+        <div class="skill-dev">
+          <h1 class="skill-title"> Kemampuan </h1>
+          <ul id="skill-dev-list"></ul>
+        </div>
       </div>
     </div>
     
     <div class="container darkBg" id="contact">
       <div class="contact">
         <h1 class="content-title contact-title">
-          Contact Me <i class="fab fa-whatsapp" style="color: lime"></i>
+          Contact Me <i class="fab fa-whatsapp"></i>
         </h1>
         <div class="form-wrap fadein-hidden">
           <div class="form darkBg">
@@ -196,14 +230,14 @@
             <div class="contact-wrap">
               <div class="contact-column">
                 <p class="contact-label"> Nama </p>
-                <input type="text" maxlength="16" class="inputText input-nama">
+                <input placeholder="Tulis nama" type="text" maxlength="16" class="inputText input-nama">
               </div>
               <div class="contact-column">
                 <p class="contact-label"> Pesan</p>
-                <textarea maxlength="200" class="inputText textArea"></textarea>
+                <textarea placeholder="Tulis pesan" maxlength="200" class="inputText textArea"></textarea>
               </div>
               <div class="btn-wrap">
-                <button class="btn-send" Kirim> Kirim </button>
+                <button type="button" class="btn-send" Kirim> Kirim </button>
               </div>
             </div>
           </div>
@@ -213,8 +247,8 @@
     
     <div class="container darkBg">
       <footer class="forumBg">
-        <div class="copyright">
-          <h1 class="copyright-title"> jonathankarisoh09@gmail.com </h1>
+        <div class="copyright select-gelap">
+          <h1 class="copyright-title darkText"> jonathankarisoh09@gmail.com </h1>
           <p class="copyright-subtitle">
             Joudev | Sulawesi Utara, Manado
           </p>
@@ -228,7 +262,7 @@
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="js/all.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/animation.js"></script>
+  <script defer src="js/animation.js"></script>
 </body>
 
 </html>

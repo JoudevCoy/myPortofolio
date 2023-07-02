@@ -19,8 +19,7 @@
 }
 
 
-/* Font import */
-
+/* Font Import */
 @font-face {
   font-family: 'OpenSansB';
   src: url("fonts/OpenSans-Bold.ttf") format("ttf");
@@ -65,25 +64,24 @@ html {
 body {
   background: var(--white);
   font-family: 'OpenSansL', Sans-Serif;
-  transition: all 0.5s ease;
+  transition: background 0.5s ease;
 }
 header {
-  position: fixed;
+  position: sticky;
   width: 100%;
   background: var(--biruTosca);
   box-shadow: 0 0 20px 7px #00000040;
   z-index: 9999;
   top: 0;
+  transition: background .2s ease !important;
 }
 .navbar {
+  position: relative;
   display: flex;
   justify-content: end;
   padding: 0 4px;
   top: 0;
   transition: transform none, opacity none;
-}
-.navbar .bar {
-  transition: background 0s ease;
 }
 .navbar .hamburger-nav {
   width: 36px; height: 3px;
@@ -121,6 +119,7 @@ header {
   gap: 3rem;
   padding: 13px 25px;
   right: 0;
+  transition: background .2s ease;
 }
 .navbar .bar li {
   padding: 5px 15px;
@@ -130,11 +129,16 @@ header {
 .navbar .bar li a {
   width: 100%;
   border-radius: 25px;
-  color: var(--white);
   font-weight: 400;
   padding: 5px 10px;
   transition: all .2s linear;
+  color: var(--white);
+}
+.navbar .bar li a span {
   font-family: 'MonterratR', Sans-Serif;
+}
+.navbar .bar li a .icon {
+  display: none;
 }
 .navbar .bar .darkmodeToggle {
   background: #cdc4b5;
@@ -153,6 +157,11 @@ header {
   }
 }
 
+/* back nav */
+.back-nav {
+  display: none;
+}
+
 
 
 /** BAGIAN HERO **/
@@ -161,7 +170,7 @@ header {
   padding-top: 80px;
   padding-bottom: 170px;
   background: #fff;
-  transition: all 0.5s ease;
+  transition: background 0.5s ease;
 }
 .hero .hero-wrap {
   display: flex;
@@ -181,6 +190,7 @@ header {
   width: 100%;
   font-family: 'CallunaSansI', 'OpenSansL', Sans-Serif;
   opacity: 0;
+  filter: blur(1px);
 }
 .hero-title-wrap .hero-title {
   margin-top: 200px;
@@ -217,8 +227,8 @@ header {
   width: 50%;
   text-align: center;
 }
-.hero .hero-wrap .hero-img-wrap .hero-img {
-  width: 500px !important;
+.hero-img {
+  width: 500px;
   height: 460px;
   object-fit: cover;
 }
@@ -229,7 +239,7 @@ header {
   padding: 120px 80px;
   background: #fff;
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: background 0.5s ease;
 }
 .content-title {
   font-size: 40px;
@@ -295,8 +305,7 @@ header {
 .about-img-wrap .about-img {
   z-index: 1;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 500px;
   bottom: 0;
 }
 
@@ -391,6 +400,54 @@ header {
 }
 
 
+/** BAGIAN SKILL **/
+.skills {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+}
+.skill-dev,
+.skill-tech {
+  width: 50%;
+  padding: 0 15px;
+}
+.skill-dev .skill-title,
+.skill-tech .skill-title {
+  width: 100%;
+  font-size: 25px;
+  color: var(--biruTosca);
+}
+.skill-dev ul,
+.skill-tech ul {
+  margin-left: 30px;
+}
+.skill-tech ul li,
+.skill-dev ul li {
+  margin-top: 10px;
+}
+.skill-tech ul li .skill-name,
+.skill-dev ul li .skill-dev-name {
+  font-family: 'OpenSansB', Sans-Serif;
+  font-size: 19px;
+}
+.skill-tech ul li .skill-percent {
+  text-align: end;
+  background: var(--biruTosca);
+  padding: 3px 5px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.skill-tech ul li .skill-percent span {
+  color: 444;
+  font-size: 13px;
+}
+.skill-dev ul li .skill-dev-info {
+  font-family: 'OpenSansL', Sans-Serif;
+  color: var(--biruTosca);
+  font-size: 19px;
+}
+
+
 /** BAGIAN FORUM **/
 .contact {
   margin-top: 89px;
@@ -404,8 +461,8 @@ header {
 }
 .form-wrap .form {
   width: 300px;
-  height: 460px;
-  overflow: hidden;
+  height: auto;
+  overflow-y: auto;
   border-radius: 18px;
   box-shadow: 17px 17px 20px 5px rgba(0,0,0,0.189);
   background: linear-gradient(80deg, #f5f5f5, #eeeeee);
@@ -421,20 +478,35 @@ header {
   color: var(--dark);
 }
 .contact-wrap {
-  padding: 0 40px 100px 40px;
+  padding: 0 40px 40px 40px;
 }
 .contact-column {
   text-align: center;
   margin-bottom: 20px;
+}
+.contact-column .contact-label {
+  font-size: 20px;
+  color: var(--biruTosca);
+  text-align: start;
+  margin: 10px 0;
 }
 .contact-column .inputText {
   width: 100%;
   border: 3px solid #5b5f64;
   border-radius: 8px;
   padding: 4px 10px;
+  background: #efefef;
+}
+.contact-column .inputText:focus {
+  border: 1px solid #5b5f64;
+}
+.contact-column .textArea:focus {
+  border: 1px solid #5b5f64;
 }
 .contact-column .textArea {
-  height: 200px;
+  border: 3px solid #5b5f64;
+  height: 150px;
+  background: #efefef;
 }
 .btn-wrap {
   display: flex;
@@ -445,7 +517,19 @@ header {
   width: 100px;
   height: 30px;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 30px;
+  color: var(--biruTosca);
+  border: 3px solid #499bfd;
+  background: inherit;
+  transition: transform 180ms ease, color 200ms ease, background 100ms ease;
+}
+.btn-send:hover {
+  background: var(--biruTosca);
+  color: #fafafa;
+}
+.btn-send:active {
+  transition: transform 280ms linear;
+  transform: scale(0.85);
 }
 .hero-link {
   color: black;
@@ -518,21 +602,22 @@ footer .copyright .copyright-subtitle {
   header {
     width: 100%;
     height: 50px !important;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     padding: 0;
+    transition: background .2s ease;
   }
   .navbar .bar {
     position: fixed;
     width: 45%;
-    background: rgba(0,0,0,0.7);
+    background: var(--biruTosca);
     top: 0;
     height: 100vh;
     width: 56%;
     transform: translateX(-100%);
-    transition: all .3 ease;
+    transition: transform .3 ease, opacity .4s ease, background .2s ease;
     opacity: 0;
   }
   .navbar .bar li {
@@ -559,6 +644,21 @@ footer .copyright .copyright-subtitle {
     opacity: 1;
     top: 0;
   }
+  .back-nav {
+    display: block;
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    background: #00000040;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+  .back-nav-active {
+    width: 100vw;
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
   
   /* Bagian Hero */
   .hero {
@@ -567,11 +667,14 @@ footer .copyright .copyright-subtitle {
     text-align: center;
   }
   .hero .hero-wrap {
+    width: auto;
     flex-direction: column;
+    z-index: 1;
   }
   .hero .hero-wrap .hero-title-wrap {
     width: 100%;
     text-align: center;
+    z-index: 3;
   }
   .hero-title-wrap .hero-decor {
     opacity: 1;
@@ -590,14 +693,19 @@ footer .copyright .copyright-subtitle {
       transform: scale(1) rotate(0deg);
     }
   }
-  .hero-title-wrap .hero-desc {
-    margin-top: 80px;
-    text-align: center;
+  .hero .hero-wrap .hero-img-wrap {
+    margin-top: 50px;
     width: 100%;
-  }
-  .hero .hero-wrap .hero-img {
+    display: flex;
+    justify-content: center;
     margin-top: 0px !important;
-    display: none;
+  }
+  .hero-img {
+    width: 300px !important;
+    height: 300px !important;
+    margin-top: 0px !important;
+    z-index: 1;
+    position: absolute;
   }
   .container {
     margin-top: 100vh;
@@ -606,6 +714,11 @@ footer .copyright .copyright-subtitle {
   .content-title {
     font-size: 30px;
     text-align: center;
+  }
+  .hero-title-wrap .hero-desc {
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
   }
   
   /* Bagian About */
@@ -651,6 +764,15 @@ footer .copyright .copyright-subtitle {
   .more-prj-link {
     font-size: 20px;
     font-family: 'OpenSansB', Monospace;
+  }
+  
+  /* Bagian Skill */
+  .skills {
+    flex-direction: column;
+  }
+  .skill-dev {
+    margin-top: 100px;
+    float: left;
   }
   
   /* Bagian Kontak */
@@ -735,18 +857,20 @@ footer .copyright .copyright-subtitle {
     top: 0;
     left: 0;
     right: 0;
+    transition: background .2s ease;
   }
   .navbar .bar {
     position: absolute;
     width: 45%;
-    background: rgba(0,0,0,0.7);
+    background: #6092ce;
     display: block;
     top: 0; 
     left: 0;
     height: 100vh;
     width: 56%;
+    box-shadow: 0 8px 20px 5px #00000030;
     transform: translateX(-100%);
-    transition: all .3 ease;
+    transition: transform .3s ease, opacity .4s ease, background .2s ease !important;
     opacity: 0;
   }
   .navbar .bar li {
@@ -754,6 +878,10 @@ footer .copyright .copyright-subtitle {
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 1s ease-in-out, opacity 1s ease;
+  }
+  .navbar .bar li a .icon {
+    display: inline;
+    margin-left: 10px;
   }
   .navbar .bar li:hover {
     transform: translateX(20px);
@@ -769,11 +897,27 @@ footer .copyright .copyright-subtitle {
   }
   .navbar .nav-active {
     transform: translateX(0%);
-    display: block;
-    transition: all .3 ease;
+    transition: transform .3 ease, opacity .5s linear;
     opacity: 1;
     top: 0;
   }
+  .back-nav {
+    display: block;
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    background: #00000040;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+  .back-nav-active {
+    width: 100vw;
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  
+  /* Bagian Hero */
   .hero {
     width: 100%;
     height: 100vh;
@@ -781,23 +925,25 @@ footer .copyright .copyright-subtitle {
   }
   .hero-wrap {
     margin-top: 100px;
+    overflow: visible;
   }
   .hero .hero-wrap {
     flex-direction: column;
+    overflow: hidden;
   }
   .hero .hero-wrap .hero-title-wrap {
     width: 100%;
   }
   .hero-title-wrap .hero-title {
-      margin-top: 0px;
-      padding: 0 40px;
-      font-size: 35px;
+    margin-top: 0px;
+    padding: 0 40px;
+    font-size: 35px;
   }
   .hero-title-wrap .hero-decor {
     opacity: 1;
   }
   .hero-title-wrap .hero-decor span {
-    animation: anim1 5s infinite ease;
+    animation: anim1 3s infinite ease;
   }
   @keyframes anim1 {
     0% {
@@ -815,18 +961,22 @@ footer .copyright .copyright-subtitle {
     text-align: center;
     width: 100%;
   }
-  .hero .hero-wrap .hero-img {
-    margin-top: 0px !important;
-    display: none;
-  }
   .hero .hero-wrap .hero-img-wrap {
+    margin-top: 50px;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px !important;
   }
-  .hero .hero-wrap .hero-img-wrap .hero-img{
+  .hero-img {
     width: 400px;
     height: 400px;
+    margin-top: 0px !important;
+    z-index: 1;
+    position: absolute;
   }
+  
+  /****/
   .container {
     margin-top: 100vh;
     padding: 100px 25px 40px 25px;
@@ -915,27 +1065,27 @@ footer .copyright .copyright-subtitle {
 .tampilanGelap {
   background: #121b24;
   color: aliceblue;
-  transition: all 0.5s ease;
+  transition: color 0.5s ease, background .5s ease;
 }
 .tampilanGelap .darkBg {
   background: #293440;
   color: white;
-  transition: all 0.5s ease;
+  transition: background .2s ease, color .2s ease !important;
 }
 .tampilanGelap .select-gelap .darkText1,
 .tampilanGelap .darkText1 {
   color: #96a5b6;
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 }
 .tampilanGelap .select-gelap .darkText,
 .tampilanGelap .darkText {
   color: #fff;
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 }
 .tampilanGelap .forumBg {
   background: #293440;
   color: white;
-  transition: all 0.5s ease;
+  transition: background 0.5s ease, color .5s ease;
   background: linear-gradient(10deg, #212c39, #293440);
 }
 
@@ -957,12 +1107,12 @@ footer .copyright .copyright-subtitle {
   font-size: 32px;
 }
 
-.fa-github {
+.github-icon .fa-github {
   color: #444;
 }
-.fa-whatsapp {
+.whatsapp-icon .fa-whatsapp {
   color: #60dd33;
 }
-.fa-tiktok {
+.tiktok-icon .fa-tiktok {
   color: #444;
 }

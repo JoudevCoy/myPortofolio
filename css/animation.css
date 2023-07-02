@@ -1,3 +1,10 @@
+/*
+  Animate On Scroll CSS by Joudev
+  Copyright Joudev©
+  
+  You can find this framework in my github:
+  https://github.com/JoudevCoy/animateOnScroll
+*/
 /** Animate On Scroll **/
 
 /* Bagian FadeIn */
@@ -28,9 +35,21 @@
     transform .5s ease;
 }
 
-
 /* Bagian Fade Right */
-
+.faderight-hidden {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 
+    opacity .5s ease,
+    transform .2s ease;
+}
+.faderight {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 
+    opacity .4s ease,
+    transform .5s ease;
+}
 
 
 

@@ -1,20 +1,36 @@
 //BAGIAN JQUERY
 $(document).ready(function(){
+  $("html").css("scroll-behavior", "smooth");
   $(".hamburger-nav").bind("click", () => {
     $(".hamburger-nav").toggleClass("btnNav-active");
+    backNav();
   });
-  $("html").css("scroll-behavior", "smooth");
+  function backNav(){
+    if ($(".bar").hasClass("nav-active")){
+      $(".back-nav").addClass("back-nav-active");
+    } else {
+      $(".back-nav").removeClass("back-nav-active");
+    }
+  }
+  
+  $(".back-nav").bind("click", () => {
+    $(".bar").removeClass("nav-active");
+    $(".hamburger-nav").removeClass("btnNav-active");
+    $(".back-nav").removeClass("back-nav-active");
+  });
+  
 });
 
 //BAGIAN JAVASCRIPT
 
-var navbar = document.querySelector('.bar'),
-btnNav = document.querySelector('.hamburger-nav');
-
+const navbar = document.querySelector(".bar"),
+  btnNav = document.querySelector(".hamburger-nav");
+  
 btnNav.addEventListener("click", () => {
   navbar.classList.toggle("nav-active");
-  navbar.style.transition = "all .3s ease";
+  navbar.style.transition = "transform .3s ease";
 });
+
 
 let darkToggle = document.querySelector(".darkmodeToggle"),
 tampilanGelap = document.querySelector(".darkDisplay");
@@ -22,7 +38,6 @@ tampilanGelap = document.querySelector(".darkDisplay");
 
 darkToggle.addEventListener("click", function(){
   tampilanGelap.classList.toggle("tampilanGelap");
-  darkmodeUI.classList.toggle("darkUi");
 });
 
 //FUNGSI PENGIRIMAN PESAN***++++----___
@@ -33,5 +48,5 @@ msgText = document.querySelector(".textArea");
 msgName = document.querySelector(".input-nama");
 btnSend.addEventListener("click", send);
 function send(){
-  location.href = "https://wa.me/628977962089?text=Pesan dari " + msgName.value + " yang tertulis:* " + msgText.value + " *";
+  window.location.href = "https://wa.me/628977962089?text=Pesan dari " + msgName.value + " yang tertulis:* " + msgText.value + " *";
 }

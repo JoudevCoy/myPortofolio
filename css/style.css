@@ -771,8 +771,15 @@ footer .copyright .copyright-subtitle {
     flex-direction: column;
   }
   .skill-dev {
+    width: 100%;
     margin-top: 100px;
     float: left;
+  }
+  .skill-tech {
+    width: 100%;
+  }
+  .skill-tech-list li {
+    width: 100%;
   }
   
   /* Bagian Kontak */

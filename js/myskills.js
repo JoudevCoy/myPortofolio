@@ -7,24 +7,24 @@ const skillDevList = document.getElementById("skill-dev-list");
 //myskills
 var mySkill = [
   {
-    "skill": " HTML",
-    "percent": 95.00
+    "skill": "HTML5",
+    "tech": "html5"
   },
   {
-    "skill": " CSS",
-    "percent": 83.19
+    "skill": "CSS3",
+    "tech": "css3"
   },
   {
-    "skill": " Javascript",
-    "percent": 32.02
+    "skill": "Javascript",
+    "tech": "js"
   },
   {
-    "skill": " Node Js",
-    "percent": 5.77
+    "skill": "NodeJs",
+    "tech": "node"
   },
   {
-    "skill": " SCSS",
-    "percent": 37.01
+    "skill": "SASS",
+    "tech": "sass",
   }
 ];
 
@@ -44,7 +44,7 @@ var mySkillDev = [
   },
   {
     "name": " UI/UX Design",
-    "info": " Intermediate"
+    "info": " Basic"
   }
 ]
 
@@ -52,10 +52,10 @@ var mySkillDev = [
 // bagian myskills
 var skills = 0;
 for (skills in mySkill){
+  var techIcon = mySkill[skills].tech;
   var skillContent = `
     <li class="fadeleft-hidden delay-200">
-      <p class="skill-name">${mySkill[skills].skill}</p>
-      <div class="skill-percent" style="width:${Math.floor(mySkill[skills].percent)}%"><span class="darkText">${Math.floor(mySkill[skills].percent)}%</span></div>
+      <p class="skill-name"> <i class="fab fa-${techIcon}"></i> ${mySkill[skills].skill}</p>
     </li>
   `;
   $(skillList).append(skillContent);

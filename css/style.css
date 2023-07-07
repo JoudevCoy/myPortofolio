@@ -430,17 +430,6 @@ header {
   font-family: 'OpenSansB', Sans-Serif;
   font-size: 19px;
 }
-.skill-tech ul li .skill-percent {
-  text-align: end;
-  background: var(--biruTosca);
-  padding: 3px 5px;
-  border-radius: 15px;
-  border: 1px solid black;
-}
-.skill-tech ul li .skill-percent span {
-  color: 444;
-  font-size: 13px;
-}
 .skill-dev ul li .skill-dev-info {
   font-family: 'OpenSansL', Sans-Serif;
   color: var(--biruTosca);

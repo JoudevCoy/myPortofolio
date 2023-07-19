@@ -30,13 +30,14 @@
   }
 </style>
 
-<div class="box1">
-  <iframe src="http://localhost:8080/"></iframe>
-  <iframe src="http://localhost:8080/"></iframe>
-  <iframe src="http://localhost:8080/"></iframe>
-</div>
+<!--<div class="box1">-->
+<!--  <iframe src="http://localhost:8080/"></iframe>-->
+<!--  <iframe src="http://localhost:8080/"></iframe>-->
+<!--  <iframe src="http://localhost:8080/"></iframe>-->
+<!--</div>-->
 <div class="box2">
   <iframe id="frame-control" src="http://localhost:8080/"></iframe>
+  <h1 id="rangeValue"> Value </h1>
   <input type="range" id="range-input" max="2000" min="300" onchange="setIframe()">
 </div>
 
@@ -46,6 +47,7 @@
       rangeInput = document.getElementById("range-input");
       
     frame.style.width = rangeInput.value + "px";
+    document.getElementById("rangeValue").innerHTML = rangeInput.value + "px";
     requestAnimationFrame(setIframe);
   }
 </script>

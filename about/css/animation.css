@@ -1,0 +1,90 @@
+/*
+  Animate On Scroll CSS by Joudev
+  Copyright Joudev©
+  
+  You can find this framework in my github:
+  https://github.com/JoudevCoy/animateOnScroll
+*/
+/** Animate On Scroll **/
+
+/* Bagian FadeIn */
+.fadein-hidden {
+  opacity: 0;
+  transition: 
+    opacity .5s 0 ease;
+}
+.fadein {
+  opacity: 1;
+  transition:
+    opacity .4s .2s ease;
+}
+
+/* Bagian Fade Left */
+.fadeleft-hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 
+    opacity .5s ease,
+    transform .2s ease;
+}
+.fadeleft {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 
+    opacity .4s ease,
+    transform .5s ease;
+}
+
+/* Bagian Fade Right */
+.faderight-hidden {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 
+    opacity .5s ease,
+    transform .2s ease;
+}
+.faderight {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 
+    opacity .4s ease,
+    transform .5s ease;
+}
+
+
+
+
+
+
+
+/***** SETTINGS *****/
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-400 {
+  transition-delay: 400ms;
+}
+.delay-500 {
+  transition-delay: 500ms;
+}
+.delay-600 {
+  transition-delay: 600ms;
+}
+.delay-700 {
+  transition-delay: 700ms;
+}
+.delay-800 {
+  transition-delay: 800ms;
+}
+.delay-900 {
+  transition-delay: 900ms;
+}
+.delay-1000 {
+  transition-delay: 1s;
+}

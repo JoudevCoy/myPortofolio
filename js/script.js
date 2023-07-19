@@ -50,3 +50,12 @@ btnSend.addEventListener("click", send);
 function send(){
   window.location.href = "https://wa.me/6287815118956?text=Pesan dari " + msgName.value + " yang tertulis:* " + msgText.value + " *";
 }
+
+
+
+// Loading
+
+window.addEventListener("DOMContentLoaded", () => {
+  $(".loading").css("display", "none");
+});
+

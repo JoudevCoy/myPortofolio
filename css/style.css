@@ -11,7 +11,7 @@
 }
 
 
-/* Font Import
+/* Font Import */
 @font-face {
   font-family: 'OpenSansB';
   src: url("fonts/OpenSans-Bold.ttf");
@@ -27,7 +27,7 @@
 @font-face {
   font-family: 'CallunaSansI';
   src: url("fonts/CallunaSans-Italic.otf");
-} ==> Banned <== */
+}
 @font-face {
   font-family: 'Roboto';
   src: url("fonts/Roboto-Regular.woff2");
@@ -41,7 +41,7 @@
   text-decoration: none;
   list-style: none;
   user-select: none;
-  font-family: 'Roboto';
+  font-family: 'Roboto', arial, sans-serif;
 }
 
 
@@ -68,7 +68,7 @@ html {
 
 body {
   background: var(--white);
-  font-family: 'Roboto', Sans-Serif;
+  font-family: 'OpenSansL', Sans-Serif;
   transition: background 0.5s ease;
 }
 header {

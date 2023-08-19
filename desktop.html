@@ -1,53 +1,72 @@
-<style>
-  body {
-    margin: 0; padding: 0;
-    width: 3000px;
-    box-sizing: border-box;
-  }
-  .box1 {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 30px;
-  }
-  .box2 input {
-    position: fixed;
-    bottom: 50px;
-    left: 0;
-    height: 20px;
-    width: 100%;
-  }
-  iframe:nth-child(1) {
-    width: 1200px;
-    height: 900px;
-  }
-  iframe:nth-child(2) {
-    width: 760px;
-    height: 900px;
-  }
-  iframe:nth-child(3) {
-    width: 480px;
-    height: 900px;
-  }
-</style>
-
-<!--<div class="box1">-->
-<!--  <iframe src="http://localhost:8080/"></iframe>-->
-<!--  <iframe src="http://localhost:8080/"></iframe>-->
-<!--  <iframe src="http://localhost:8080/"></iframe>-->
-<!--</div>-->
-<div class="box2">
-  <iframe id="frame-control" src="http://localhost:8080/"></iframe>
-  <h1 id="rangeValue"> Value </h1>
-  <input type="range" id="range-input" max="2000" min="300" onchange="setIframe()">
-</div>
-
-<script>
-  function setIframe(){
-    var frame = document.getElementById("frame-control"),
-      rangeInput = document.getElementById("range-input");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Responsive Testing </title>
+</head>
+<body>
+  <style>
+    * { 
+      margin: 0; padding: 0; 
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+    body {
+      min-width: 500px;
+      min-height: 100vh;
+      position: relative;
+      text-align: center;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      box-shadow: 5px 5px 13px #00000030;
+    }
+    .control {
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+      width: 100vw;
+      display: flex;
+      gap: 50px;
+      flex-direction: column;
+    }
+    .control input[type="range"]{
+      width: 100%;
+      padding: 0 30px;
+    }
+  </style>
+  
+  <iframe id="iframe" src="http://localhost:5500" width="450" height="700"></iframe>
+  
+  <div class="control">
+    <span id="output"> Width : 450px, Height : 700px </span>
+    <input type="range" id="iframeWidth" min="300" max="1700" />
+    <input type="range" id="iframeHeight" min="500" max="1700" />    
+  </div>
+  
+  
+  <script>
+    const rangeW = document.getElementById("iframeWidth"),
+      rangeH = document.getElementById("iframeHeight"),
+      iframe = document.getElementById("iframe"),
+      output = document.getElementById("output");
       
-    frame.style.width = rangeInput.value + "px";
-    document.getElementById("rangeValue").innerHTML = rangeInput.value + "px";
-    requestAnimationFrame(setIframe);
-  }
-</script>
+    rangeW.addEventListener("input", () => {
+      iframe.style.width = rangeW.value + "px";
+      output.innerHTML = ` Width : ${rangeW.value}, Height : ${rangeH.value}`;
+    });
+    
+    rangeH.addEventListener("input", () => {
+      iframe.style.height = rangeH.value + "px";
+      output.innerHTML = ` Width : ${rangeW.value}, Height : ${rangeH.value}`;
+    });
+  </script>
+</body>
+</html>

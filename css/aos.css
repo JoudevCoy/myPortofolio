@@ -11,12 +11,12 @@
 .fadein-hidden {
   opacity: 0;
   transition: 
-    opacity .5s 0 ease;
+    opacity .5s ease;
 }
-.fadein {
+.fadein-hidden.fadein {
   opacity: 1;
   transition:
-    opacity .4s .2s ease;
+    opacity .4s ease;
 }
 
 /* Bagian Fade Left */
@@ -27,7 +27,7 @@
     opacity .5s ease,
     transform .2s ease;
 }
-.fadeleft {
+.fadeleft-hidden.fadeleft {
   opacity: 1;
   transform: translateX(0);
   transition: 
@@ -43,10 +43,26 @@
     opacity .5s ease,
     transform .2s ease;
 }
-.faderight {
+.faderight-hidden.fadeleft {
   opacity: 1;
   transform: translateX(0);
   transition: 
+    opacity .4s ease,
+    transform .5s ease;
+}
+
+/* Bagian Fade Bottom */
+.fadebottom-hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 
+    opacity .5s ease,
+    transform .2s ease;
+}
+.fadebottom-hidden.fadebottom {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
     opacity .4s ease,
     transform .5s ease;
 }

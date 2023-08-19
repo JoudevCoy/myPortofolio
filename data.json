@@ -1,0 +1,40 @@
+{
+  "project": [
+    {
+      "title": " Weather Tracking ",
+      "thumb": "./assets/project/weatherTracking-thumb.jpg",
+      "desc": "saya membuat aplikasi sederhana tentang info cuaca dengan desain yang simpel, saya menggunakan API dari openweathermap dan anda bisa melihat file projek ini di github saya!",
+      "tech": "HTML,CSS,JS",
+      "link": "https://joudevcoy.github.io/weatherTracking"
+    },
+    {
+      "title": " Shop Card Design ",
+      "thumb": "./assets/project/shopCardDesign-thumb.jpg",
+      "desc": "saya mencoba membuat desain Shop Card menggunakan SCSS agar mendesainnya lebih mudah. Saya membuat desain simpel dan mempunyai beberapa pilihan warna dan ukuran, walaupun kekuranganya ketika kita mengganti warna pada sepatu, gambar sepatu tidak berubah warna seperti seharusnya karena saya hanya menggunakan satu foto saja",
+      "tech": "HTML,SCSS,JS",
+      "link": "https://joudevcoy.github.io/Shop-Card-Design"
+    },
+    {
+      "title": "Chat Website Aplication",
+      "thumb": "./assets/project/chatWebApp-thumb.jpg",
+      "desc": "Saya mencoba membuat Chat Web App sederhana menggunakan Nodejs, Express.js dan WebSocket. Saya mendeploy aplikasi saya ini di platform glitch.com karena glitch.com ini bisa membuat aplikasi Nodejs kita bisa diakses semua orang",
+      "tech": "HTML,CSS,JS,NodeJS,Socket.io",
+      "link": "https://understood-alert-spirit.glitch.me"
+    }
+  ],
+  "tech": [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "NodeJS",
+    "ReactJS",
+    "SASS",
+    "Typescript"
+  ],
+  "skill": [
+    { "name":"Frontend Developer", "skill":"Advanced" },
+    { "name":"Backend Developer", "skill":"Basic" },
+    { "name":"Graphic Designer", "skill":"Basic" },
+    { "name":"UI/UX Design", "skill":"Basic" }
+  ]
+}

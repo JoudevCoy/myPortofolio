@@ -1,272 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
   <!-- Meta's tag for SEO -->
   <meta name="title" content="Joxtelap Portofolio Website || HOME">
   <meta name="author" content="Jonathan Karisoh (JOUDEV)">
   <meta name="description"
-    content="Halo semuanya saya Joudev, ini adalah website portofolio saya yang saya buat untuk menyimpan projek-projek yang saya buat! Mau buat website? Saya menerima jasa untuk buat website atau desain website untuk kamu. Dan harga tergantung kepuasan kamu, kategori, keahlian dan kesulitan">
+    content="Halo semuanya saya Joudev, ini adalah website portofolio saya yang saya buat untuk menampilkan pekerjaan, tentang saya dan projek-projek yang saya buat! Mau buat website? Saya menerima jasa untuk buat website atau desain website untuk kamu. Dan harga tergantung kepuasan kamu, kategori, keahlian dan kesulitan">
   <meta name="keywords" content="jonathan karisoh, jouwebsite, joudev">
   <meta property="og:title" content=" My Portofolio || Joudev ">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="../logo.png">
+  <meta property="og:type" content="blog">
+  <meta property="og:image" content="logo.png">
   <meta property="og:site_name" content="Joudev Portofolio">
   <meta property="og:description"
-    content="Halo semuanya saya Joudev, ini adalah website portofolio saya yang saya buat untuk menyimpan projek-projek yang saya buat! Mau buat website? Saya menerima jasa untuk buat website atau desain website untuk kamu. Dan harga tergantung kepuasan kamu, kategori, keahlian dan kesulitan">
+    content="Halo semuanya saya Joudev, ini adalah website portofolio saya yang saya buat untuk menampilkan pekerjaan, tentang saya dan projek-projek yang saya buat! Mau buat website? Saya menerima jasa untuk buat website atau desain website untuk kamu. Dan harga tergantung kepuasan kamu, kategori, keahlian dan kesulitan">
+  
+  <!-- Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="logo.png">
   
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animation.css">
-  <link rel="stylesheet" href="css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
   
-  <script defer src="js/myskills.js"></script>
+  <!-- AOS -->
+  <link rel="stylesheet" href="./css/aos.css"/>
+  <script src="./js/aos.js"></script>
+  
   <title> My Portofolio || Joudev </title>
 </head>
-
-<body class="darkDisplay">
-  <header class="darkBg">
-    <div class="navbar">
-      <h1 class="navbar-logo fadein-hidden"> JoudevCoy </h1>
-      <div class="hamburger-nav">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+<body>
+  
+  <!-- Bagian Overlay -->
+  
+  <div class="overlay">
+    <img alt="Tunggu Sebentar.." src="./assets/wait-developer.png"/>
+  </div>
+  
+  <!-- Bagian Akhir Overlay -->
+  
+  
+  <!-- Bagian Navigasi -->
+  
+  <nav>
+    <img class="nav-logo" src="./logo.png" alt="Joudev"/>
+    <span class="nav-btn" id="navbar-btn">
+      <i class="fa fa-bars"></i>
+    </span>
+    <ul class="nav-bar">
+      <img class="welcome-img" src="./assets/welcome-img.png" alt="WELCOME!" />
+      <li><a data-href="#" class="nav-bar-link"> Home </a></li>
+      <li><a data-href="#about" class="nav-bar-link"> About </a></li>
+      <li><a data-href="#work" class="nav-bar-link"> Works </a></li>
+      <li><a data-href="#skill" class="nav-bar-link"> Skills </a></li>
+      <li><a data-href="#contact" class="nav-bar-link"> Contact </a></li>
+      <div class="copyright">
+        <h1> JoudevCoy </h1>
+        <p> 2023 &copy;Copyright - All rights reserved </p>
       </div>
-      <ul class="bar darkBg">
-        <li><a href="#"> 
-          <span> Home </span> <i class="fas fa-home icon"></i>
-        </a></li>
-        <li><a href="#about">
-          <span> About </span> <i class="fas fa-user-tie icon"></i>
-        </a></li>
-        <li><a href="#project">
-          <span> Project </span> <i class="far fa-rectangle-list icon"></i>
-        </a></li>
-        <li><a href="#skills">
-          <span> Skills </span> <i class="fas fa-star icon"></i>
-        </a></li>
-        <li><a href="#contact">
-          <span> Contact </span> <i class="fab fa-whatsapp icon"></i>
-        </a></li>
-        <li class="darkmodeToggle"><a href="#"><marquee>Mode Gelap</marquee></a></li>
-      </ul>
-    </div>
-  </header>
+    </ul>
+  </nav>
   
-  <!-- SPESIAL -->
-  <div class="back-nav"></div>
+  <!-- Bagian Akhir Navigasi -->
   
   
-  <!-- BAGIAN HERO -->
-  <div class="darkDisplay">
-    <div class="hero darkBg">
-      <div class="hero-wrap">
-        
-        <div class="hero-title-wrap select-gelap">
-          <div class="hero-decor">
-            <span class="d1 faderight-hidden delay-100"> &#60;h1&#62; </span>
-            <span class="d2 fadeleft-hidden delay-100"> &#60;/h1&#62; </span>
-          </div>
-          <h1 class="hero-title darkText"> Joudev <span>Frontend Developer</span> </h1>
-          <p class="hero-desc darkText1"> Selamat datang di website portofolio ku, saya adalah seorang Frontend Developer! Scroll kebawah untuk melihat lainnya! </p>
-          <a href="#about" class="hero-link"> Down <i class="fas fa-arrow-circle-down"></i></a>
+  <!-- Bagian Header -->
+  <div class="header">
+    <img class="hero-img" src="./assets/hero-img-light.png">
+  </div>
+  
+  <!-- Bagian Akhir Header -->
+  
+  
+  <!-- Bagian Home -->
+  
+  <div class="jumbotron">
+    <div class="main">
+      <div class="main-left">
+        <h1> Selamat Datang Di Website Portofolio Ku! </h1>
+        <p>
+          Perkenalkan nama saya Jonathan Karisoh! Saya seorang frontend developer.
+        </p>
+        <div class="jumbotron-action">
+          <a data-href="#about" class="btn about-page"> Kebawah <i class="fas fa-arrow-down"></i> </a>
+          <a data-href="#contact" class="btn form-page"> Pesan <i class="fas fab fa-whatsapp"></i> </a>
         </div>
-        
-        <div class="hero-img-wrap">
-          <img src="images/developer.png" alt="Developer Image" class="hero-img">
-        </div>
-        
+      </div>
+      <div class="main-right">
+        <img src="./assets/portofolioIlustration-edit.png" alt="Portofolio ilustration image"/>
       </div>
     </div>
   </div>
   
-  <!-- BAGIAN KONTEN -->
-  <div class="darkDisplay"><!-- Don't Delete -->
-    
-    <div id="about"></div>
-    
-    <div class="container about-wrap darkBg">
-      <div class="about">
-        <h1 class="content-title about-title">
-          My About <i class="fas fa-user-tie"></i>
-        </h1>
-        <div class="p-wrap fadein-hidden">
-          <p class="p darkText1 pengalaman-wrap">
-            Halo👋👋👋 perkenalkan nama saya Jonathan Peterson Karisoh! Saya seorang Frontend Developer 🌐🌐🌐 --- Klik link "Lainnya" untuk melihat tentang saya lainnya! --- ☑☑☑
-            <a class="hero-link darkText center" href="/about">
-              Lainnya <i class="fas fa-arrow-right"></i>
-            </a>
-          </p>
-          <p class="p darkText1">
-            
-            Jangan lupa berkunjung ke media sosial saya untuk melihat proyek-proyek dan aktifitas saya lainnya!
-            
-          <div class="social-wrap">
-            <div class="social-media">
-              <ul class="link">
-                <li><a href="https://github.com/JoudevCoy" class="social-link lg-icon github-icon select-gelap">
-                  <i class="fa-brands fa-github darkText1"></i>
-                </a></li>
-                
-                <li><a href="https://wa.me/687815118956" class="social-link lg-icon whatsapp-icon">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a></li>
-                
-                <li><a href="#" class="social-link lg-icon tiktok-icon select-gelap"> 
-                  <i class="fa-brands fa-tiktok darkText1"></i>
-                </a></li>
-              </ul>
-            </div>
-          </div>
-          </p>
-        </div>
-        <div class="about-img-wrap">
-          <img src="images/wave-bg.png" alt="About image" class="about-img">
+  <!-- Bagian Akhir Home -->
+  
+  
+  <!-- Bagian About -->
+  
+  <div class="newLine" style="--newLine-value: 400px;" id="about"><!--## Target ##--></div>
+  <div class="container">
+    <h1 class="content-title"> About </h1>
+    <div class="about">
+      <div class="main-left">
+        <img class="avatar fadein-hidden" data-aosDelay="500" alt="AVATAR" src="./assets/avatar/Dev-Say-Hi.png"/>
+      </div>
+      <div class="main-right">
+        <p class="fadebottom-hidden" data-aosDelay="500">
+          Halo perkenalkan nama saya Jonathan Karisoh! Saya berusia 14 tahun (2023). Saya adalah Frontend Developer. Saya tinggal di Sulawesi Utara, di Kabupaten Minahasa. Saya membuat website menggunakan Smartphone, tapi itu tidak akan mematahkan semangat saya!
+        </p>
+        <p class="fadebottom-hidden" data-aosDelay="500">
+          Saya juga sedang belajar tentang Graphic Design, 3D Graphic Design, UI/UX yang akan membantu saya sebagai developer! Saya juga sedang mempelajari Side Server menggunakan NodeJS, dan mempelajari pembuatan Website Aplikasi menggunakan ReactJS!
+        </p>
+        <div class="media-social fadebottom-hidden" data-aosDelay="500">
+          <a class="link" href="https://tiktok.com/@joudevcoy"> Jangan lupa berkunjung ke akun Tiktok saya! <i class="fas fab fa-tiktok"></i></a>
         </div>
       </div>
     </div>
-    
-    <div class="container darkBg" id="project">
-      <h1 class="content-title">
-        My Projects <i class="far fa-rectangle-list"></i>
-      </h1>
-      <div class="project-wrap">
-        <div class="project">
-          <div class="prj-column fadeleft-hidden">
-            <img data-lazySrc="images/myprojects/weatherTracking-thumb.jpg" alt="Thumbnail" class="prj-thumb lazyLoad">
-            <div class="prj-column-wrap">
-              <h2 class="prj-title"> Weather Tracking </h2>
-              <p class="prj-desc">
-                saya membuat aplikasi sederhana tentang info cuaca dengan desain yang simpel!
-                saya menggunakan API dari openweathermap dan anda bisa melihat file projek ini di github
-                saya!
-              </p>
-              <ul class="prj-filter-wrap">
-                <li class="prj-filter"> HTML </li>
-                <li class="prj-filter"> CSS </li>
-                <li class="prj-filter"> Javascript </li>
-              </ul>
-              <div class="prj-link-wrap">
-                <a href="https://joudevcoy.github.io/weatherTracking" class="prj-link"> View </a>
-              </div>
-            </div>
-          </div>
-          <div class="prj-column fadeleft-hidden delay-100">
-            <img data-lazySrc="images/myprojects/shopCardDesign-thumb.jpg" alt="Thumbnail" class="prj-thumb lazyLoad">
-            <div class="prj-column-wrap">
-              <h2 class="prj-title"> Shop Card Design </h2>
-              <p class="prj-desc"> 
-                saya mencoba membuat desain Shop Card menggunakan SCSS agar mendesainnya lebih mudah.
-                Saya membuat desain simpel dan mempunyai beberapa pilihan warna dan ukuran, walaupun kekuranganya
-                ketika kita mengganti warna pada sepatu, gambar sepatu tidak berubah warna seperti seharusnya
-                karena saya hanya menggunakan satu foto saja
-              </p>
-              <ul class="prj-filter-wrap">
-                <li class="prj-filter"> HTML </li>
-                <li class="prj-filter"> SCSS </li>
-                <li class="prj-filter"> Javascript </li>
-              </ul>
-              <div class="prj-link-wrap">
-                <a href="https://joudevcoy.github.io/Shop-Card-Design" class="prj-link"> View </a>
-              </div>
-            </div>
-          </div>
-          <div class="prj-column fadeleft-hidden delay-200">
-            <img data-lazySrc="images/myprojects/chatWebApp-thumb.jpg" alt="Thumbnail" class="prj-thumb lazyLoad">
-            <div class="prj-column-wrap">
-              <h2 class="prj-title"> Aplikasi Chat Sederhana </h2>
-              <p class="prj-desc">
-                Saya mencoba membuat Chat Web App sederhana menggunakan Nodejs, Express.js dan WebSocket.
-                Saya mendeploy aplikasi saya ini di platform glitch.com karena glitch.com ini bisa membuat
-                aplikasi Nodejs kita bisa diakses semua orang
-              </p>
-              <ul class="prj-filter-wrap">
-                <li class="prj-filter"> HTML </li>
-                <li class="prj-filter"> Nodejs </li>
-                <li class="prj-filter"> Express </li>
-                <li class="prj-filter"> WebSocket </li>
-              </ul>
-              <div class="prj-link-wrap">
-                <a href="https://understood-alert-spitit.glitch.me" class="prj-link"> View </a>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+  
+  <!-- Bagian Akhir About -->
+  
+  
+  <!-- Bagian Work -->
+  
+  <div class="newLine" style="--newLine-value: 400px;" id="work"><!--## Target ##--></div>
+  <div class="container">
+    <h1 class="content-title"> Works </h1>
+    <div class="work">
+      <div class="disclaimer">
+        <span class="disclaimer-icon fa-bounce">!</span>
+        <img src="./assets/avatar/Talk-Anim-Dev.gif" alt="DEVELOPER BERBICARA"/>
+        <p>
+          <b> ~Joudev: </b> Halo saya Joudev dalam versi digital! Saya ingin mengucapkan terimakasih untuk kalian yang sudah mau berkunjung ke website ini, saya membuat beberapa projek yang bisa kalian <b>clone</b> ke perangkat kalian lewat <b>Github</b>. Jangan lupa kunjungi github saya yah! <a href="https://github.com/JoudevCoy">https://github.com/JoudevCoy</a>. TERIMAKASIH!
+        </p>
       </div>
-      <div class="more-prj-wrap">
-        <a href="https://github.com/JoudevCoy" class="more-prj-link darkText"> More </a>
-      </div>
-    </div>
-    
-    <div class="container darkBg" id="skills">
-      <h1 class="content-title"> 
-        My Skills <i class="fas fa-star"></i>
-      </h1>
-      <div class="skills select-gelap">
-        <div class="skill-tech">
-          <h1 class="skill-title"> Teknologi </h1>
-          <ul id="skill-tech-list"></ul>
-        </div>
-        <div class="skill-dev">
-          <h1 class="skill-title"> Kemampuan </h1>
-          <ul id="skill-dev-list"></ul>
+      
+      <div class="projects">
+        <div class="loading-box">
+          <div class="preloader"></div>
         </div>
       </div>
     </div>
-    
-    <div class="container darkBg" id="contact">
-      <div class="contact">
-        <h1 class="content-title contact-title">
-          Contact Me <i class="fab fa-whatsapp"></i>
-        </h1>
-        <div class="form-wrap fadein-hidden">
-          <div class="form darkBg">
-            <h1 class="form-title darkText">Kirim Pesan Whatsapp</h1>
-            <div class="contact-wrap">
-              <div class="contact-column">
-                <p class="contact-label"> Nama </p>
-                <input placeholder="Tulis nama" type="text" maxlength="16" class="inputText input-nama">
-              </div>
-              <div class="contact-column">
-                <p class="contact-label"> Pesan</p>
-                <textarea placeholder="Tulis pesan" maxlength="200" class="inputText textArea"></textarea>
-              </div>
-              <div class="btn-wrap">
-                <button type="button" class="btn-send" Kirim> Kirim </button>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+  
+  <!-- Bagian Akhir Work -->
+  
+  
+  <!-- Bagian Skill -->
+  
+  <div class="newLine" style="--newLine-value: 400px;" id="skill"><!--## Target ##--></div>
+  <div class="container">
+    <h1 class="content-title"> Skills </h1>
+    <div class="skills">
+      <div class="tech">
+        <h1> Teknologi </h1>
+        <ul></ul>
+      </div>
+      <div class="skill">
+        <h1> Kemampuan </h1>
+        <ul></ul>
       </div>
     </div>
-    
-    <div class="container darkBg">
-      <footer class="forumBg">
-        <div class="copyright select-gelap">
-          <h1 class="copyright-title darkText"> jonathankarisoh09@gmail.com </h1>
-          <p class="copyright-subtitle">
-            Joudev | Sulawesi Utara, Manado
-          </p>
-        </div>
-      </footer>
+  </div>
+  
+  <!-- Bagian Akhir Skill -->
+  
+  
+  <!-- Bagian Contact -->
+  
+  <div class="newLine" style="--newLine-value: 400px" id="contact"><!--## Target ##--></div>
+  <div class="container contact-wrapper">
+    <h1 class="content-title"> Contact </h1>
+    <form class="contact">
+      <h1 class="contact-title"><i class="fas fab fa-square-whatsapp"></i> </h1>
+      <div class="column">
+        <label for="name"> Masukan Nama </label>
+        <input type="text" placeholder="Masukan Nama" name="text" id="name" />
+      </div>
+      <div class="column">
+        <label for="msg"> Masukan Pesan </label>
+        <textarea type="text" placeholder="Masukan Pesan" name="text" id="msg"></textarea>
+      </div>
+      <div class="column">
+        <button class="contact-btn" id="submit-btn" type="button"> Kirim </button>
+      </div>
+      <p id="info">
+        <!--## Info ##-->
+      </p>
+    </form>
+  </div>
+  
+  <!-- Bagian Akhir Contact -->
+  
+  
+  <!-- Bagian Footer -->
+  
+  <div class="newLine" style="--newLine-value: 180px;"></div>
+  <img class="wave" src="./assets/wave-blue.png" alt="WAVE"/>
+  <footer>
+    <h1 class="content-title"> Thanks! </h1>
+    <div class="main">
+      <div class="column">
+        <h1> Tautan </h1>
+        <ul class="link-social">
+          <li data-href="https://www.tiktok.com/@joudevcoy"><i class="fas fab fa-tiktok"></i></li>
+          <li data-href="https://wa.me/6287815118956"><i class="fas fab fa-whatsapp"></i></li>
+          <li data-href="https://github.com/JoudevCoy"><i class="fas fab fa-github"></i></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h1> Bagian </h1>
+        <ul class="link-part">
+          <li><a data-href="#" class="nav-bar-link"> Home </a></li>
+          <li><a data-href="#about" class="nav-bar-link"> About </a></li>
+          <li><a data-href="#work" class="nav-bar-link"> Works </a></li>
+          <li><a data-href="#skill" class="nav-bar-link"> Skills </a></li>
+          <li><a data-href="#contact" class="nav-bar-link"> Contact </a></li>
+        </ul>
+      </div>
+      <div class="column address">
+        <h1> Tempat Saya </h1>
+        <ul>
+          <li>
+            <address>
+              Indonesia, Minahasa Tengah, JL. Tondano - Kakas, Desa Telap
+            </address>
+          </li>          
+        </ul>
+      </div>
     </div>
-    
-    <div class="loading">
-      <div>Lo</div>
-      <div>ad</div>
-      <div>ing</div>
+    <div class="copyright">
+      <h1> JoudevCoy </h1>
+      <p> 2023 &copy;Copyright - All rights reserved </p>
     </div>
-    
-  </div><!-- End of the Darkmode -->
-  <script src="js/jquery-2.2.4.min.js"></script>
-  <script src="js/all.min.js"></script>
-  <script src="js/script.js"></script>
-  <script defer src="js/animation.js"></script>
+  </footer>
+  
+  <!-- Bagian Akhir Footer -->
+  
+  
+  
+  
+  
+  
+  
+  <!-- Framework (Fontawesome) -->
+  <link rel="stylesheet" crossorigin="anonymous" href="./css/all.min.css"/>
+  <script type="text/javascript" crossorigin="anonymous" src="./js/all.min.js"></script>
+  
+  <!-- My Script -->
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" crossorigin="anonymous" src="./js/script.js"></script>
 </body>
 
 </html>
